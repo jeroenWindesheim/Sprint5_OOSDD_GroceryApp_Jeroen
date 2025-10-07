@@ -29,11 +29,9 @@
                 <DataTemplate x:DataType="m:Category">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="2*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Text="{Binding Id}"/>
-                        <Label Grid.Column="1" Text="{Binding Name}"/>
+                        <Label Grid.Column="1" Text="{Binding Name}" HorizontalTextAlignment="Start"/>
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
