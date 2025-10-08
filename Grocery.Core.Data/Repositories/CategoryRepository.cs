@@ -11,9 +11,9 @@ public class CategoryRepository : ICategoryRepository
         categories =
         [
             new Category(1, "Groente"),
-            new Category(1, "Bakkerij"),
-            new Category(1, "Zuivel"),
-            new Category(1, "Ontbijt"),
+            new Category(2, "Bakkerij"),
+            new Category(3, "Zuivel"),
+            new Category(4, "Ontbijt")
         ];
     }
 

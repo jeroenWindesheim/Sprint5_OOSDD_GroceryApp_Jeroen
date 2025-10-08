@@ -21,6 +21,13 @@ public partial class CategoriesViewModel : BaseViewModel
         CategoryLists = new(_categoryService.GetAll());
         
     }
+
+    [RelayCommand]
+    public async Task SelectCategoryList(Category category)
+    {
+        Dictionary<string, object> parameter = new() { { nameof(Category), category } };
+        await Shell.Current.GoToAsync($"{nameof(Views.ProductCategoriesView)}?Id={category.Name}&Titel={category.Name}", true, parameter);
+    }
     
     public override void OnAppearing()
     {

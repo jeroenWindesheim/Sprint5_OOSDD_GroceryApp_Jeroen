@@ -20,7 +20,10 @@
         Margin="10"
         HorizontalOptions="Center">
         <CollectionView x:Name="CategoryView" ItemsSource="{Binding CategoryLists}"
-                        HorizontalOptions="Center">
+                        HorizontalOptions="Center"
+                        SelectionMode="Single"
+                        SelectionChangedCommand="{Binding SelectCategoryListCommand}"
+                        SelectionChangedCommandParameter="{Binding Source={RelativeSource Self}, Path=SelectedItem}">
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
             </CollectionView.ItemsLayout>
